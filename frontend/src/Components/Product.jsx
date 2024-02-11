@@ -54,8 +54,70 @@ const Product = () => {
             <button className='ml-[100px] mt-4 bg-rose-500 h-[50px] w-[250px] text-lg hover:bg-rose-400 rounded-md text-white font-bold ' onClick={handleOnClick}
                 >Add to Cart</button>
             <button className='ml-[30px] h-[50px] w-[150px] bg-zinc-300 rounded-md focus:bg-pink-500 transition ease-in-out duration-500 focus:animate-bounce font-semibold'>WISHLIST</button>
-   
+            <p className='ml-[100px] font-bold mt-4'>PRODUCT DETAILS  </p>
+            <p className='ml-[100px] font-semibold mt-2'>Size and Fit </p>
+            <p className='ml-[100px] text-zinc-500 mt-1'>Regular- Fit</p>
+            <p className='ml-[100px] text-zinc-500 '>The model (height 6') is wearing a size M </p>
+            <p className='ml-[100px] font-semibold mt-2'>Material and Care </p>
+            <p className='ml-[100px] text-zinc-500 mt-1'>Cotton</p>
+            <p className='ml-[100px] text-zinc-500 '>Machine Wash</p>
         </div>
+      
+        </div>
+        <div className='ml-5 '>
+                <p className='font-bold ml-5 mt-3'>SPECIFICATIONS</p>
+            <div className='flex flex-row ml-10 mt-3 ' >
+                <div className='ml-[200px] mr-[400px]'>
+                <p className='text-zinc-500'>Closure</p>
+                <p>{product.specification.closure}</p>
+           
+                </div>
+               
+                <div >
+                <p className='text-zinc-500 mr-[396px]'>Fabric</p>
+                <p>{product.specification.fabric}</p>
+                </div>
+                <div >
+                <p className='text-zinc-500'>Fit</p>
+                <p>{product.specification.fit}</p>
+                </div>
+                
+            </div>
+            <hr className='ml-[200px] mt-3 mr-[200px] bg-zinc-200'></hr>
+            <div className='flex flex-row ml-10 mt-3 ' >
+                <div className='ml-[200px] '>
+                <p className='text-zinc-500 mr-[400px]'>Length</p>
+                <p>{product.specification.length}</p>
+                </div>
+                <div >
+                <p className='text-zinc-500 mr-[365px]'>Main Trend</p>
+                <p>{product.specification.main}</p>
+                </div>
+                <div >
+                <p className='text-zinc-500'>Muti pack set</p>
+                <p>{product.specification.multi}</p>
+                </div>
+                
+            </div>
+            <hr className='ml-[200px] mt-3 mr-[200px] bg-zinc-200'></hr>
+            <div className='flex flex-row ml-10 mt-3 ' >
+                <div className='ml-[200px] '>
+                <p className='text-zinc-500 mr-[365px]'>No of Items</p>
+                <p>{product.specification.no}</p>
+                </div>
+                <div >
+                <p className='text-zinc-500 mr-[370px]'>Wash Care</p>
+                <p>{product.specification.wash}</p>
+                </div>
+                <div >
+                <p className='text-zinc-500'>Weave Type </p>
+                <p>{product.specification.weave}</p>
+                </div>
+                
+            </div>
+         
+
+
         </div>
     </div>
     <Footer/>

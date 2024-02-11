@@ -56,7 +56,7 @@ const Cart = () => {
       
       </div>
       <hr className='ml-[105px] mr-[850px] mt-3'></hr>
-      <p className='btn btn-primary ml-[105px] mt-3'> Proceed to CheckOut </p>
+      <p className='btn btn-primary ml-[105px] mt-3 mb-5'> Proceed to CheckOut </p>
     </div>
     </div>:
     <div className='flex h-[600px] w-full justify-center items-center flex-col'>

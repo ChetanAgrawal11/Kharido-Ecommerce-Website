@@ -6,10 +6,40 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const history=useNavigate();
   const [cat, setCat] = useState("");
-
+  function handleOnClick() {
+    const alertMessage = document.getElementById("alertmessage");
+    if (alertMessage) {
+      alertMessage.classList.remove("hidden");
+    }
+  }
+  function handledouble() {
+    const alertMessage = document.getElementById("alertmessage");
+    if (alertMessage) {
+      alertMessage.classList.add("hidden");
+    }
+  }
 
   return (
     <>
+    <div  id="alertmessage" class=" hidden bg-yellow-50 border border-yellow-200 text-sm text-yellow-800 rounded-lg p-4 dark:bg-yellow-800/10 dark:border-yellow-900 dark:text-yellow-500" role="alert">
+  <div class="flex">
+    <div class="flex-shrink-0">
+      <svg class="flex-shrink-0 h-4 w-4 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+    </div>
+    <div class="ms-4">
+      <h3 class="text-sm font-semibold">
+        Please Log In to add Products in the Cart
+      </h3>
+     
+    </div>
+    <div className="ml-[1130px]">
+    <button onClick={handledouble} type="button" class="inline-flex bg-yellow-50 rounded-lg p-1.5 text-yellow-500 hover:bg-yellow-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-teal-50 focus:ring-yellow-600 dark:bg-transparent  " data-hs-remove-element="#dismiss-alert">
+          
+          <svg class="flex-shrink-0 h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+    </div>
+  </div>
+</div>
       <div className="nav flex justify-between p-2">
         <div className="sec1 flex align-items-center ">
           <img className="h-8 mt-1 ml-1 rounded-md" src={logo} alt="logo" />
@@ -54,9 +84,15 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="sec3 flex">
-          <Link to={"/Cart"}>
+          {localStorage.getItem('token')?<Link to={"/Cart"}>
             <img className="h-8 mt-1 mr-8 rounded-md transform scale-[2.5] hover:animate-spin" src={cart} alt="cart" />
-          </Link>
+          </Link>:
+          <div>
+            <button onClick={handleOnClick}><img className="h-8 mt-1 mr-8  rounded-md transform scale-[2.5] " src={cart} alt="cart" /></button>
+        
+        </div>
+          }
+          
           {localStorage.getItem("token") ?
             <button onClick={()=>{
               localStorage.removeItem('token');

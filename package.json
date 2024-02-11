@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@preline/remove-element": "^2.0.2",
     "express-validator": "^7.0.1"
   }
 }
