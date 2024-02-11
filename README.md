@@ -14,7 +14,7 @@ An Online Ecommerce Website where different categories product can be added and 
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/ChetanAgrawal11/Kharido-Ecommerce-Website/blob/master/s1.png)
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
